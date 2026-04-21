@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geochemistry - Earthprobe Nigeria Limited</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    
+    <style>
+        .service-detail-wrapper {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .service-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); }
+        .service-content p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .service-content ul { list-style: none; margin-bottom: 2rem; }
+        .service-content li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .service-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0; color: var(--accent-orange); font-weight: bold;
+        }
+        .service-image {
+            border-radius: 16px; overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .service-image img {
+            width: 100%; display: block; object-fit: cover; aspect-ratio: 4/5;
+            transition: transform 0.8s ease;
+        }
+        .service-image:hover img { transform: scale(1.05); }
+        
+        @media(max-width: 900px) {
+            .service-detail-wrapper { grid-template-columns: 1fr; }
+            .service-image img { aspect-ratio: 16/9; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition"><div class="loader"></div></div>
+
+    <nav class="site-nav">
+        <!-- Exact same navbar as others -->
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand" style="flex-direction: row; align-items: center; gap: 10px;">
+                <img src="./Images/Logo.png" alt="Earthprobe Logo" style="height: 45px; width: auto;">
+                <div style="display: flex; flex-direction: column;">
+                    <span class="brand-text">Earth<span class="highlight">probe</span></span>
+                    <span class="brand-sub">Nigeria Limited</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                <a href="services.html" class="nav-link">Services</a>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:2px;"><path d="M6 9l6 6 6-6"/></svg>
+                <div class="dropdown-menu">
+                    <a href="service-biostratigraphy.html">Biostratigraphy</a>
+                    <a href="service-wellsite.html">Well-Site Biostratigraphy</a>
+                    <a href="service-sequencestratigraphy.html">Sequence Stratigraphy</a>
+                    <a href="service-sedimentology.html">Sedimentology</a>
+                    <a href="service-geochemistry.html">Geochemistry</a>
+                    <a href="service-samplestorage.html">Sample Storage and Administration</a>
+                </div>
+            </div>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="margin-left:1rem; padding: 0.7rem 1.5rem;">Get in Touch</a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-banner">
+            <div class="container">
+                <h1 class="anim-fade-up">Geochemistry</h1>
+                <p class="anim-fade-up delay-100">Evaluating organic matter to assess hydrocarbon generation potential.</p>
+            </div>
+        </header>
+
+        <section class="section-padding" style="padding-top: 4rem;">
+            <div class="container service-detail-wrapper">
+                <div class="service-content anim-slide-right">
+                    <span class="highlight" style="font-weight: 600; letter-spacing: 1px; text-transform:uppercase;">Core Expertise</span>
+                    <h2>Geochemistry</h2>
+                    <p>The geochemical analysis is a specialized services demanding high technology equipment and expertise which our local laboratory facilities cannot support are undertaken in Joint Venture collaboration with long established, reputable and well respected Geochemical Laboratory overseas.</p>
+                    <p>The philosophy behind this technical partnership by Earthprobe Nigeria Limited is to ensure that local resources are supplemented by a worldwide pool of the most advanced and the most competent technology and experience, to the benefit of our clients.</p>
+                    <h3>We offer a wide range of geochemical services including:</h3>
+                    <ul>
+                        <li>Total Organic Carbon (TOC)</li>
+                        <li>Rock- Eval Extraction and Pyrolysis for Kerogen type, maturity and oil shows GHM extraction and Pyrolysis for detailed kerogen-typing, characterization of shows and reservoir fluids.</li>
+                        <li>Victrinite Reflectance</li>
+                        <li>Kerogen Typing</li>
+                        <li>Elemental Analysis</li>
+                        <li>GC/GCM Analysis</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top: 1rem;">Request Consultation</a>
+                </div>
+                <div class="service-image anim-slide-left delay-100">
+                    <img src="./Images/Geochemistry 1.jpg" alt="Petroleum Samples in Lab">
+                </div>
+            </div>
+        </section>
+        
+        <div style="text-align: center; padding-bottom: 4rem;">
+            <a href="services.html" style="color: var(--text-secondary); text-decoration: underline;">&larr; Back to all services</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding -->
+                <div class="footer-col anim-fade-up">
+                    <a href="index.html" class="brand" style="margin-bottom: 1rem; flex-direction: row; align-items: center; gap: 10px; justify-content: flex-start;">
+                        <img src="./Images/Logo.png" alt="Earthprobe Logo" style="height: 45px; width: auto;">
+                        <div style="display: flex; flex-direction: column; text-align: left;">
+                            <span class="brand-text">Earth<span class="highlight">probe</span></span>
+                        </div>
+                    </a>
+                    <p>An indigenous petroleum consultancy company incorporated in 1997 to provide stratigraphic
+                        services for all types of exploration and production applications.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col anim-fade-up delay-100">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Link -->
+                <div class="footer-col anim-fade-up delay-200">
+                    <h4>Core Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-biostratigraphy.html">Biostratigraphy</a></li>
+                        <li><a href="service-wellsite.html">Well-Site Biostratigraphy</a></li>
+                        <li><a href="service-sequencestratigraphy.html">Sequence Stratigraphy</a></li>
+                        <li><a href="service-sedimentology.html">Sedimentology</a></li>
+                        <li><a href="service-geochemistry.html">Geochemistry</a></li>
+                        <li><a href="service-samplestorage.html">Sample Storage and Administration</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col anim-fade-up delay-300">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>4, Hughes Avenue,<br>Alagomeji, Yaba, Lagos.</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>info@earthprobeng.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>+234 802 247 3706</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 Earthprobe Nigeria Limited. All rights reserved.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--text-secondary);"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="#" style="color: var(--text-secondary);"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
