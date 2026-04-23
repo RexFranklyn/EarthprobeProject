@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Well-site Biostratigraphy - Earthprobe Nigeria Limited</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    
+
     <style>
         .service-detail-wrapper {
             display: grid;
@@ -17,41 +20,77 @@
             gap: 4rem;
             align-items: center;
         }
-        .service-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); }
-        .service-content p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .service-content ul { list-style: none; margin-bottom: 2rem; }
+
+        .service-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .service-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
         .service-content li {
             position: relative;
             padding-left: 2rem;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
+
         .service-content li::before {
             content: '✓';
             position: absolute;
-            left: 0; color: var(--accent-orange); font-weight: bold;
+            left: 0;
+            color: var(--accent-orange);
+            font-weight: bold;
         }
+
         .service-image {
-            border-radius: 16px; overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             position: relative;
         }
+
         .service-image img {
-            width: 100%; display: block; object-fit: cover; aspect-ratio: 4/5;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4/5;
             transition: transform 0.8s ease;
         }
-        .service-image:hover img { transform: scale(1.05); }
-        
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
         @media(max-width: 900px) {
-            .service-detail-wrapper { grid-template-columns: 1fr; }
-            .service-image img { aspect-ratio: 16/9; }
+            .service-detail-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .service-image img {
+                aspect-ratio: 16/9;
+            }
         }
     </style>
     <link rel="icon" href="./Images/Logo.png" type="image/png">
-    <meta name="keywords" content="oil company, oil well drilling, biostratigraphy, sequence stratigraphy, well-site stratigraphy, geology, oil rig, Earthprobe Nigeria Limited, petroleum consultancy, oil and gas exploration, micropalaeontology, nannopalaeontology, palynology, geo-steering, reservoir characterization, source rock evaluation, paleoenvironments, Nigeria oil and gas consulting, West Africa offshore drilling, sedimentology, geochemical analysis, core sample administration">
+    <meta name="keywords"
+        content="oil company, oil well drilling, biostratigraphy, sequence stratigraphy, well-site stratigraphy, geology, oil rig, Earthprobe Nigeria Limited, petroleum consultancy, oil and gas exploration, micropalaeontology, nannopalaeontology, palynology, geo-steering, reservoir characterization, source rock evaluation, paleoenvironments, Nigeria oil and gas consulting, West Africa offshore drilling, sedimentology, geochemical analysis, core sample administration">
 </head>
+
 <body>
-    <div class="page-transition"><div class="loader"></div></div>
+    <div class="page-transition">
+        <div class="loader"></div>
+    </div>
 
     <nav class="site-nav">
         <!-- Exact same navbar as others -->
@@ -67,20 +106,24 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <div class="nav-dropdown">
-                <a href="services.html" class="nav-link">Services</a>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:2px;"><path d="M6 9l6 6 6-6"/></svg>
-                <div class="dropdown-menu">
-                    <a href="service-biostratigraphy.html">Biostratigraphy</a>
-                    <a href="service-wellsite.html">Well-Site Biostratigraphy</a>
-                    <a href="service-sequencestratigraphy.html">Sequence Stratigraphy</a>
-                    <a href="service-sedimentology.html">Sedimentology</a>
-                    <a href="service-geochemistry.html">Geochemistry</a>
-                    <a href="service-samplestorage.html">Sample Storage and Administration</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="margin-top:2px;">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                    <div class="dropdown-menu">
+                        <a href="service-biostratigraphy.html">Biostratigraphy</a>
+                        <a href="service-wellsite.html">Well-Site Biostratigraphy</a>
+                        <a href="service-sequencestratigraphy.html">Sequence Stratigraphy</a>
+                        <a href="service-sedimentology.html">Sedimentology</a>
+                        <a href="service-geochemistry.html">Geochemistry</a>
+                        <a href="service-samplestorage.html">Sample Storage and Administration</a>
+                    </div>
                 </div>
-            </div>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="margin-left:1rem; padding: 0.7rem 1.5rem;">Get in Touch</a>
+                <a href="contact.html" class="btn btn-primary" style="margin-left:1rem; padding: 0.7rem 1.5rem;">Get in
+                    Touch</a>
             </div>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
@@ -90,35 +133,42 @@
         <header class="page-banner">
             <div class="container">
                 <h1 class="anim-fade-up">Well-site Biostratigraphy</h1>
-                <p class="anim-fade-up delay-100">Real-time biostratigraphic monitoring to guide drilling operations.</p>
+                <p class="anim-fade-up delay-100">Real-time biostratigraphic monitoring to guide drilling operations.
+                </p>
             </div>
         </header>
 
         <section class="section-padding" style="padding-top: 4rem;">
             <div class="container service-detail-wrapper">
                 <div class="service-content anim-slide-right">
-                    <span class="highlight" style="font-weight: 600; letter-spacing: 1px; text-transform:uppercase;">Core Expertise</span>
+                    <span class="highlight"
+                        style="font-weight: 600; letter-spacing: 1px; text-transform:uppercase;">Core Expertise</span>
                     <h2>Well-site Biostratigraphy (Real-Time Drilling Support)</h2>
-                    <p>Well-site biostraigraphy is an established tool for the real-time monitoring of drilling principally used to determine the following:</p>
+                    <p>Well-site biostraigraphy is an established tool for the real-time monitoring of drilling
+                        principally used to determine the following:</p>
                     <ul>
                         <li>Depth-by-depth age interpretation of drilled section.</li>
                         <li>Real-time assessment of Actual Vs Prognosed well stratigraphy</li>
                         <li>Determination of accurate correlation of shale to shale with wells drilled around.</li>
                         <li>Contribute to data that will help choose accurate coring and casing points</li>
                         <li>Confirmation of datum horizons</li>
-                        <li>Electronic data in ASCII, which will be sent to companies’ designate on the rig and onshore as often as required by geologist on the rig.</li>
+                        <li>Electronic data in ASCII, which will be sent to companies’ designate on the rig and onshore
+                            as often as required by geologist on the rig.</li>
                     </ul>
-                    <p>Our biostratigraphers would be available on the rig to provide real-time biostratigraphic monitoring and analysis during drilling operations to support stratigraphic correlation, reservoir navigation, and well placement.</p>
+                    <p>Our biostratigraphers would be available on the rig to provide real-time biostratigraphic
+                        monitoring and analysis during drilling operations to support stratigraphic correlation,
+                        reservoir navigation, and well placement.</p>
                     <a href="contact.html" class="btn btn-outline" style="margin-top: 1rem;">Request Consultation</a>
                 </div>
                 <div class="service-image anim-slide-left delay-100">
-                    <img src="./Images/Rig.jpg" alt="Microscope analysis">
+                    <img src="./Images/Rig.png" alt="Microscope analysis">
                 </div>
             </div>
         </section>
-        
+
         <div style="text-align: center; padding-bottom: 4rem;">
-            <a href="services.html" style="color: var(--text-secondary); text-decoration: underline;">&larr; Back to all services</a>
+            <a href="services.html" style="color: var(--text-secondary); text-decoration: underline;">&larr; Back to all
+                services</a>
         </div>
     </main>
 
@@ -127,7 +177,8 @@
             <div class="footer-grid">
                 <!-- Branding -->
                 <div class="footer-col anim-fade-up">
-                    <a href="index.html" class="brand" style="margin-bottom: 1rem; flex-direction: row; align-items: center; gap: 10px; justify-content: flex-start;">
+                    <a href="index.html" class="brand"
+                        style="margin-bottom: 1rem; flex-direction: row; align-items: center; gap: 10px; justify-content: flex-start;">
                         <img src="./Images/Logo.png" alt="Earthprobe Logo" style="height: 45px; width: auto;">
                         <div style="display: flex; flex-direction: column; text-align: left;">
                             <span class="brand-text">Earth<span class="highlight">probe</span></span>
@@ -213,4 +264,5 @@
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>

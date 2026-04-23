@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Swiped Left -> Next Slide
                     nextSlideFn();
                     resetSlider();
-                } else if (swipeDistance < -50) {
+                } else if (swipeDistanceX < -50) {
                     // Swiped Right -> Previous Slide
                     prevSlideFn();
                     resetSlider();
