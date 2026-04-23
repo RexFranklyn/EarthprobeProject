@@ -1,5 +1,15 @@
 // Advanced script for page transitions, intersections, and interactions
 
+// Fix BFCache mobile back-button freezing
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+        const pageTransition = document.querySelector('.page-transition');
+        if (pageTransition) {
+            pageTransition.classList.add('fade-out');
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Remove Page Loader Transition immediately on load with elegant reveal
@@ -81,6 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.toggle('menu-open');
         });
     }
+
+    // Ensure state parity on screen resizing
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            if(hamburger) hamburger.classList.remove('open');
+            if(navLinks) navLinks.classList.remove('active');
+            if(navbar) navbar.classList.remove('menu-open');
+            document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('mobile-open'));
+        }
+    }, {passive: true});
+
+    // Close mobile dropdown when tapping outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            const isDropdownClick = e.target.closest('.nav-dropdown');
+            if (!isDropdownClick) {
+                document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('mobile-open'));
+            }
+        }
+    });
 
     // 5. Sophisticated Intersection Observer for Scroll Animations
     const animElements = document.querySelectorAll('.anim-fade-up, .anim-fade-in, .anim-slide-left, .anim-slide-right, .anim-scale-up');
@@ -243,6 +273,45 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial check for slider navigator
         if (sliderControls) {
             sliderControls.style.display = 'none';
+        }
+
+        // Mobile Swipe Gesture Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        const heroSection = document.querySelector('.hero');
+        
+        if (heroSection) {
+            heroSection.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            }, {passive: true});
+
+            heroSection.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                touchEndY = e.changedTouches[0].screenY;
+                handleSwipe();
+            }, {passive: true});
+            
+            const handleSwipe = () => {
+                const swipeDistanceX = touchStartX - touchEndX;
+                const swipeDistanceY = Math.abs(touchStartY - touchEndY);
+                
+                // If scrolling vertically more than horizontally, abort slider!
+                if (swipeDistanceY > Math.abs(swipeDistanceX)) return;
+
+                // 50px threshold to prevent accidental swipes
+                if (swipeDistanceX > 50) {
+                    // Swiped Left -> Next Slide
+                    nextSlideFn();
+                    resetSlider();
+                } else if (swipeDistance < -50) {
+                    // Swiped Right -> Previous Slide
+                    prevSlideFn();
+                    resetSlider();
+                }
+            };
         }
 
         startSlider();
